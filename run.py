@@ -33,6 +33,7 @@ def validate_data(values):
     or if there are not excatly 6 values.
     """
     try:
+        [int(value) for value in values ]
         if len(values) != 6:
             raise ValueError(
                 f"Exactly 6 digits, you provided {len(values)}"
